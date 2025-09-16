@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Angry Message Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #message {
+            font-size: 3em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ff4444;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #ff4444;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>😡 Angry Message Generator 😡</h1>
+    <button onclick="showAngryMessage()">Show Message</button>
+
+    <div id="message"></div>
+
+    <script>
+        const messages = [
+            "BAS KARO YEH ZAVADYA SADWTA!!!",
+            "ABH MAA KA BETA HONE KI SEEMA PAR PAHUNCH GAYA!",
+            "GHAR JA KE APNE KO SUDHARO!!!",
+            "KYA SOCH KE AISA KAR RAHE HO??",
+            "ZAVADYA!!! AUR NA KARO YEH BEKAAR KA!!"
+        ];
+
+        function showAngryMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = messages[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
