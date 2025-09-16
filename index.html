@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Server Not Found</title>
+    <title>Server not found</title>
     <style>
         body {
-            background-color: #111;
-            color: #ff4444;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #202124;
             text-align: center;
+            padding: 100px;
         }
 
         h1 {
-            font-size: 5em;
+            font-size: 72px;
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 2em;
-            margin-bottom: 30px;
+            font-size: 24px;
+            margin-bottom: 40px;
         }
 
-        #retry-button {
-            padding: 15px 30px;
-            font-size: 1.5em;
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
             cursor: pointer;
-            background-color: #ff4444;
-            color: white;
-            border: none;
-            border-radius: 10px;
         }
 
-        @keyframes flicker {
-            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-                opacity: 1;
-            }
-            20%, 24%, 55% {
-                opacity: 0;
-            }
-        }
-
-        h1 {
-            animation: flicker 1.5s infinite;
+        button:hover {
+            background-color: #f1f3f4;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>⚠️ SERVER NOT FOUND ⚠️</h1>
-    <p>Error 404 – The requested server is unreachable.</p>
-    <button id="retry-button" onclick="showFunnyMessage()">Retry</button>
+    <h1>Server not found</h1>
+    <p>Try checking the connection, retyping the address, or running a diagnostic.</p>
+    <button onclick="showFunnyAlert()">Diagnose</button>
 
     <script>
-        function showFunnyMessage() {
+        function showFunnyAlert() {
             const messages = [
-                "Abey Zavadi! Server to ghusa hua hai!",
-                "Are Bhai, thoda dimag laga ke dobara try karo!",
-                "Kuch samajh nahi aaya kya? SERVER NAHI MILA!",
-                "Lagta hai network ne bhi chhutti le li hai... 😝"
+                "Error 404: Zavadi server chill kar raha hai 😜",
+                "Looks like the server went for chai break ☕😂",
+                "Whoops! Brain not found 😆",
+                "Try again later, server ka mood kharab hai 🤣"
             ];
             const randomIndex = Math.floor(Math.random() * messages.length);
             alert(messages[randomIndex]);
@@ -70,4 +58,5 @@
     </script>
 
 </body>
+
 </html>
